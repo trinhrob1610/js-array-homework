@@ -21,15 +21,12 @@ bai1(100);
 
 function bai2(n)
   {
-      // Biến cờ hiệu
       var flag = true;
 
-      // Nếu n bé hơn 2 tức là không phải số nguyên tố
       if (n < 2){
           flag = false;
       }
       else{
-          // lặp từ 2 tới n-1
           for (var i = 2; i < n-1; i++)
           {
               if (n % i == 0){
@@ -39,7 +36,6 @@ function bai2(n)
           }
       }
 
-      // Kiểm tra biến flag
       if (flag == true){
           document.write(n + " là số nguyên tố <br/>");
       }
@@ -67,3 +63,17 @@ function tinhTong(){
     document.getElementById("showResult").innerHTML = calc;
 }
 tingTong();
+
+function tinhUocSo(){
+    var n;
+    var S = 0;
+    var n = document.getElementById("inputBai4").value;
+    for(var i = 1; i<=n;i++){
+        if(n%i==0){
+            S++;
+        }
+    }
+    check = "uoc so la: " + S;
+    document.getElementById("result").innerHTML = check;
+}
+tinhUocSo();
